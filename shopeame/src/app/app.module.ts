@@ -4,15 +4,32 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './core/nav/nav.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { ProductoComponent } from './components/producto/producto.component';
+import { PrendasComponent } from './pages/prendas/prendas.component';
+import { HomeComponent } from './pages/home/home.component';
+import { GestionComponent } from './pages/gestion/gestion.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    FooterComponent,
+    ProductoComponent,
+    PrendasComponent,
+    HomeComponent,
+    GestionComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
