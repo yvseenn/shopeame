@@ -4,9 +4,10 @@ footer {
     background-color: #333333;
     text-align: center;
     color: white;
-    -webkit-box-shadow: -6px 3px 23px -8px rgba(122, 122, 122, 1);
-    -moz-box-shadow: -6px 3px 23px -8px rgba(122, 122, 122, 1);
-    box-shadow: -6px 3px 23px -8px rgba(122, 122, 122, 1);
+    border-radius: 2px;
+    -webkit-box-shadow: inset -14px -11px 39px -9px rgba(168, 168, 168, 1);
+    -moz-box-shadow: inset -14px -11px 39px -9px rgba(168, 168, 168, 1);
+    box-shadow:  -14px -11px 39px -9px rgba(168, 168, 168, 1);
 
     ul{
         
