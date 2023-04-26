@@ -4,7 +4,7 @@
             "id": 1,
             "nombre": "Camiseta Nike",
             "descripcion": "Camiseta deportiva de alta calidad",
-            "imagen": "",
+            "imagen": "../shopeame/src/assets/images/img1.webp",
             "precio": 39.99,
             "stock": 10
           },
@@ -12,17 +12,57 @@
             "id": 2,
             "nombre": "Zapatillas Adidas",
             "descripcion": "Zapatillas deportivas de diseño moderno",
-            "imagen": "",
-            "precio": 89.99,
+            "imagen": "../shopeame/src/assets/images/img2.webp",
+            "precio": 101.89,
             "stock": 5
           },
           {
             "id": 3,
             "nombre": "Pantalón Puma",
             "descripcion": "Pantalón deportivo cómodo y resistente",
-            "imagen": "",
+            "imagen": "../shopeame/src/assets/images/img3.webp",
+            "precio": 27.00,
+            "stock": 10
+          },
+          {
+            "id": 4,
+            "nombre": "sudadera jordan ",
+            "descripcion": "Sudadera caliente y amplia",
+            "imagen": "../shopeame/src/assets/images/img4.webp",
             "precio": 59.99,
             "stock": 8
+          },
+          {
+            "id": 5,
+            "nombre": "Camiseta North Face",
+            "descripcion": "Camiseta supersuave y cómoda",
+            "imagen": "../shopeame/src/assets/images/img5.webp",
+            "precio": 50.00,
+            "stock": 11
+          },
+          {
+            "id": 6,
+            "nombre": "Polo Black Label",
+            "descripcion": "Polo clasico negro elegante y resistente",
+            "imagen": "../shopeame/src/assets/images/img6.webp",
+            "precio": 60.00,
+            "stock": 14
+          },
+          {
+            "id": 7,
+            "nombre": "Sudadera Tommy Hilfiger",
+            "descripcion": "sudadera cómoda y estilada",
+            "imagen": "../shopeame/src/assets/images/img7.webp",
+            "precio": 69.00,
+            "stock": 12
+          },
+          {
+            "id": 8,
+            "nombre": "Sudadera Tommy Hilfiger",
+            "descripcion": "sudadera cómoda y estilada",
+            "imagen": "../shopeame/src/assets/images/img8.webp",
+            "precio": 69.00,
+            "stock": 6
           }
         ]
       }
