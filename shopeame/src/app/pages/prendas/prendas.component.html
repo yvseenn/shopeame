@@ -1,7 +1,15 @@
-<div>
+<div class="products">
     <ul>
-        <li *ngFor="let product of ">
-            
-        </li>
+        <h3>Total Productos({{ listaPrendas.length }})</h3>
+     <div class="products_product">
+         <li *ngFor="let prenda of listaPrendas">
+             <h3>{{ prenda.id }}</h3>
+             <h4>{{ prenda.nombre }}</h4>
+             <img src="{{ prenda.imagen }}" alt="{{ prenda.nombre }}" />
+             <small>{{ prenda.precio }} €</small>
+             <small>{{ prenda.descripcion }}</small>
+             <small>{{ prenda.stock }}</small>
+         </li>
+     </div>
     </ul>
 </div>

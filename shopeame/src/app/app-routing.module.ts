@@ -7,8 +7,8 @@ import { ProductoComponent } from './components/producto/producto.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
-  {path:'prendas', component:PrendasComponent},
-  {path:'prendas/:id', component:ProductoComponent},
+  {path:'productos', component:PrendasComponent},
+  {path:'productos/:id', component:ProductoComponent},
   {path:'gestion', component:GestionComponent}
 ];
 
