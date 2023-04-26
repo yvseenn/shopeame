@@ -1,5 +1,15 @@
 footer {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
+    background-color: #333333;
+    text-align: center;
+    color: white;
+
+    ul li {
+        display: flex;
+        flex-direction: row;
+    }
+
+    a {
+        color: white;
+    }
+
 }

@@ -1,6 +1,7 @@
 .outerBox {
   background-color: white;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   border-radius: 5px;
   -webkit-box-shadow: -6px 3px 23px -8px rgba(122, 122, 122, 1);
@@ -18,5 +19,8 @@
     flex-wrap: wrap;
     margin-left:50px ;
     margin-right: 50px;
+    p{
+        text-align: justify;
+    }
   }
 }
