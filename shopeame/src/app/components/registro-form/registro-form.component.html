@@ -1,0 +1,28 @@
+<form >
+    <fieldset>
+        <legend>Datos personales</legend>
+        <div>
+            <label for="">Nombre: </label>
+            <input type="text" name="nombre" placeholder="escribe tu nombre">
+
+        </div>
+        <div>
+            <label for="">Apellidos: </label>
+            <input type="text" name="apellidos" formControlName="apellidos" placeholder="escribe tus apellidos">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos de acceso</legend>
+        <div>
+            <label for="">Email: </label>
+            <input type="email" name="email" formControlName="email" placeholder="escribe tu email">
+        </div>
+        <div>
+            <label for="">Contraseña: </label>
+            <input type="password" name="clave" formControlName="clave" placeholder="escribe tu clave">
+        </div>
+    </fieldset>
+
+    <button type="submit">Registrar</button>
+</form>

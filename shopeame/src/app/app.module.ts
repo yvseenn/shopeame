@@ -11,6 +11,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { GestionComponent } from './pages/gestion/gestion.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { RegistroFormComponent } from './components/registro-form/registro-form.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     PrendasComponent,
     HomeComponent,
     GestionComponent,
-    ProductoComponent
+    ProductoComponent,
+    LoginFormComponent,
+    RegistroFormComponent
   ],
   imports: [
     BrowserModule,
