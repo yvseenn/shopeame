@@ -1,14 +1,14 @@
-<form >
+<form novalidate (ngSubmit)="submit()" [formGroup]="registroForm">
     <fieldset>
         <legend>Datos personales</legend>
         <div>
             <label for="">Nombre: </label>
-            <input type="text" name="nombre" placeholder="escribe tu nombre">
+            <input type="text" name="nombre" placeholder="escribe tu nombre" formControlName="nombre">
 
         </div>
         <div>
             <label for="">Apellidos: </label>
-            <input type="text" name="apellidos" formControlName="apellidos" placeholder="escribe tus apellidos">
+            <input type="text" name="apellidos" formControlName="apellidos" placeholder="escribe tus apellidos" formControlName="apellidos">
         </div>
     </fieldset>
 
@@ -16,11 +16,14 @@
         <legend>Datos de acceso</legend>
         <div>
             <label for="">Email: </label>
-            <input type="email" name="email" formControlName="email" placeholder="escribe tu email">
+            <input type="email" name="email" formControlName="email" placeholder="escribe tu email" formControlName="email">
         </div>
         <div>
             <label for="">Contraseña: </label>
-            <input type="password" name="clave" formControlName="clave" placeholder="escribe tu clave">
+            <input type="password" name="clave" formControlName="clave" placeholder="escribe tu clave" formControlName="password">
+            <div class="error" *ngIF="!registroForm.get('password')?.valid">
+                Contraseña incorrecta
+            </div>
         </div>
     </fieldset>
 
