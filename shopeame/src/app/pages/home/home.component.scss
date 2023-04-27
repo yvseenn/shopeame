@@ -3,24 +3,33 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  gap: 25px;
   border-radius: 5px;
   -webkit-box-shadow: -6px 3px 23px -8px rgba(122, 122, 122, 1);
   -moz-box-shadow: -6px 3px 23px -8px rgba(122, 122, 122, 1);
   box-shadow: -6px 3px 23px -8px rgba(122, 122, 122, 1);
   font-size: medium;
+  padding: 50px;
+  margin-top: 50px;
+  height: auto;
+  width: fit-content;
+
 
   h2 {
-    align-self: center;
+    text-align: center;
+    // color : red;
   }
 
   div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left:50px ;
-    margin-right: 50px;
+    gap: 25px;
+    width:100%;
     p{
         text-align: justify;
+        width: fit-content;
+
     }
   }
 }
