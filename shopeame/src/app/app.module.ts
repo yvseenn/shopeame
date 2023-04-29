@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './core/nav/nav.component';
@@ -13,6 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegistroFormComponent } from './components/registro-form/registro-form.component';
+import { RegistroComponent } from './pages/registro/registro.component';
+import { LoginComponent } from './pages/login/login.component';
+
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { RegistroFormComponent } from './components/registro-form/registro-form.
     GestionComponent,
     ProductoComponent,
     LoginFormComponent,
-    RegistroFormComponent
+    RegistroComponent,
+    RegistroFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
