@@ -1,17 +1,24 @@
 <h1>Login</h1>
 
-<form>
+<form novalidate (ngSubmit)="submit()" [formGroup]="loginForm">
     <fieldset>
         <legend>Datos de Acceso</legend>
         <div>
             <label for="">Email</label>
             <input type="email" name="email" placeholder="Escribe tu mail " formControlName="email">
+            <div class="error" *ngIf="!loginForm.get('email')?.valid">
+                El campo no es un email válido
+            </div>
+
         </div>
         <div>
             <label for="">Contraseña</label>
-            <input type="password" name="password" placeholder="Escribe tu password">
+            <input type="password" name="password" placeholder="Escribe tu password" formControlName="password">
+            <div class="error" *ngIf="!loginForm.get('password')?.valid">
+                La contraseña tiene que tener al menos 8 caracteres
+            </div>
         </div>
     </fieldset>
 
-    <button [disabled]="" type="submit">Acceder</button>
+    <button [disabled]="!loginForm.valid" type="submit">Acceder</button>
 </form>

@@ -1,14 +1,23 @@
+<h1>Registro</h1>
+
 <form novalidate (ngSubmit)="submit()" [formGroup]="registroForm">
     <fieldset>
         <legend>Datos personales</legend>
         <div>
             <label for="">Nombre: </label>
             <input type="text" name="nombre" placeholder="escribe tu nombre" formControlName="nombre">
+            <div class="error" *ngIf="!registroForm.get('nombre')?.valid">
+                No es un nombre valido
+            </div>
 
         </div>
         <div>
             <label for="">Apellidos: </label>
-            <input type="text" name="apellidos" formControlName="apellidos" placeholder="escribe tus apellidos" formControlName="apellidos">
+            <input type="text" name="apellidos" formControlName="apellidos" placeholder="escribe tus apellidos"
+                formControlName="apellidos">
+                <div class="error" *ngIf="!registroForm.get('apellidos')?.valid">
+                    El apellido no es valido
+                </div>
         </div>
     </fieldset>
 
@@ -16,16 +25,21 @@
         <legend>Datos de acceso</legend>
         <div>
             <label for="">Email: </label>
-            <input type="email" name="email" formControlName="email" placeholder="escribe tu email" formControlName="email">
-        </div>
-        <div>
-            <label for="">Contraseña: </label>
-            <input type="password" name="clave" formControlName="clave" placeholder="escribe tu clave" formControlName="password">
-            <div class="error" *ngIF="!registroForm.get('password')?.valid">
-                Contraseña incorrecta
+            <input type="email" name="email" formControlName="email" placeholder="escribe tu email"
+                formControlName="email">
+            <div class="error" *ngIf="!registroForm.get('email')?.valid">
+                No es un mail valido
+            </div>
+            <div>
+                <label for="">Contraseña: </label>
+                <input type="password" name="password" formControlName="password" placeholder="escribe tu Contraseña"
+                    formControlName="password">
+                <a class="error" *ngIf="!registroForm.get('password')?.valid">
+                    La Contraseña debe contener  8 caracteres
+                </a>
             </div>
         </div>
     </fieldset>
 
-    <button type="submit">Registrar</button>
+    <button [disabled]="!registroForm.valid" type="submit">Registrar</button>
 </form>

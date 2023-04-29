@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "email": "adasd@gmail.com",
+      "password": "$2a$10$BAsZGWE33ZtGzS7DaXWJ1umrNZLY7EbkeCqnSF8jOQj7nc3x15UsK",
+      "nombre": "adasda",
+      "apellidos": "asdad",
+      "id": 1
+    },
+    {
+      "email": "holakdie@gmail.com",
+      "password": "$2a$10$.KqmVutgnByT1/jgzbsr2OC4LiTKLHaDPEq7SxbODt/4xGTIMid5W",
+      "nombre": "asda",
+      "apellidos": "hola",
+      "id": 2
+    },
+    {
+      "email": "edu@gmail.com",
+      "password": "$2a$10$0PB/Cc0wxqfCZRWADWIO7.8pix0ET5nSjFCeTemG1c6aSfUuQByOe",
+      "nombre": "edu",
+      "apellidos": "avellanet",
+      "id": 3
+    }
+  ]
+}
