@@ -1,6 +1,7 @@
 .outerBox {
   background-color: white;
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 25px;
@@ -11,6 +12,7 @@
   font-size: medium;
   padding: 50px;
   margin-top: 50px;
+  margin-bottom: 100px;
   height: auto;
   width: fit-content;
 
