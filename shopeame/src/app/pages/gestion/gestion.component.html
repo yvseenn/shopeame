@@ -6,3 +6,25 @@
     <input formControlName="stock" placeholder="Stock">
     <button type="submit">Submit</button>
 </form>
+
+<div class="producto">
+    <div>
+      <ul>
+        <li>
+          <h3>{{ newProduct.id }}</h3>
+  
+          <h4>{{ newProduct.nombre }}</h4>
+  
+          <img src="{{ newProduct.imagen }}" alt="{{ newProduct.nombre }}" />
+  
+          <p>{{ newProduct.precio }} €</p>
+  
+          <p>{{ newProduct.descripcion }}</p>
+  
+          <p>Quedan {{ newProduct.stock }} articulos</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
