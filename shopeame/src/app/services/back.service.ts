@@ -24,10 +24,13 @@ export class BackService {
   getPrenda = (id: number) => {
     return this.http.get(`${this.baseUrl}/${id}`);
   };
-  postPrenda = (comic: any) => {
-    return this.http.post(this.baseUrl, comic);
+  postPrenda = (product: any) => {
+    return this.http.post(this.baseUrl, product);
   };
   deletePrenda = (id: number) => {
     return this.http.delete(`${this.baseUrl}/${id}`);
   };
+  patchPrenda =(producto:any) => {
+    this.prendaInfo = producto
+  }
 }
