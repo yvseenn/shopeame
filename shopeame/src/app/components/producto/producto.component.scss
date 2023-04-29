@@ -1,0 +1,42 @@
+.producto {
+    margin-top: 40px;
+    ul {
+  
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      
+        li {
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          padding: 20px;
+          border: 1px solid black;
+          width: 250px;
+          min-height: 300px;
+      
+          .product-btn {
+            margin-bottom: 25px;
+          }
+      
+          img {
+            width: 100%;
+          }
+      
+          &:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+      
+
+
+
+
+
+}
+
