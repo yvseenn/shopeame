@@ -1,7 +1,8 @@
-<form>
+<form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
     <input formControlName="nombre" placeholder="Nombre">
     <input formControlName="descripcion" placeholder="Descripcion">
     <input formControlName="imagen" placeholder="Imagen">
     <input formControlName="precio" placeholder="Precio">
     <input formControlName="stock" placeholder="Stock">
+    <button type="submit">Submit</button>
 </form>
