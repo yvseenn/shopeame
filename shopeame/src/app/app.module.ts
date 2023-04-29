@@ -14,6 +14,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { RegistroFormComponent } from './components/registro-form/registro-form.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { LoginComponent } from './pages/login/login.component';
+import { LogoutComponent } from './pages/logout/logout.component';
 
 
 
@@ -30,7 +31,8 @@ import { LoginComponent } from './pages/login/login.component';
     LoginFormComponent,
     RegistroComponent,
     RegistroFormComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

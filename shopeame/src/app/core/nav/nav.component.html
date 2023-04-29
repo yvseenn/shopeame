@@ -5,23 +5,27 @@
         <ul>
           <li><a routerLink="">Home</a></li>
           <li><a routerLink="productos">Productos</a></li>
-          <li><a routerLink="gestion">Gestion</a></li>
+          <li><a *ngIf="hayUser" [routerLink]="'gestion'">Gestión</a></li>
         </ul>
       </div>
     </div>
     <div class="nav_img">
-      <img src="../../../assets/images/flex-logo.png" alt="logo" />
+      <img src="./assets/images/flex-logo.png" alt="logo" />
     </div>
     <div class="nav_dcha">
 
 
-      <div class="nav_dcha_img1">
-        <img src="../../../assets/images/usuario.png" routerLink="login" alt="usuario" />
+      <div class="nav_dcha_img1" *ngIf="!hayUser" [routerLink]="'login'">
+        <img src="./assets/images/usuario.png" routerLink="login" alt="usuario" />
       </div>
 
 
-      <div class="nav_dcha_img2">
-        <img src="../../../assets/images/configuraciones.png" alt="configuraciones" />
+      <div class="nav_dcha_img2" *ngIf="!hayUser" [routerLink]="'login'">
+        <img src="./assets/images/configuraciones.png" alt="configuraciones" />
+      </div>
+
+      <div class="nav_dcha_img2" *ngIf="hayUser" [routerLink]="'logout'">
+        <img src="./assets/images/logout.png">
       </div>
 
     </div>
