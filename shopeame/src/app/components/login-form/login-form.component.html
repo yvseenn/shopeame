@@ -1,28 +1,89 @@
-<h1>Login</h1>
 
-<form novalidate (ngSubmit)="submit()" [formGroup]="loginForm">
-    <fieldset>
-        <legend>Datos de Acceso</legend>
-        <div>
-            <label for="">Email</label>
-            <input type="email" name="email" placeholder="Escribe tu mail " formControlName="email">
-            <div class="error" *ngIf="!loginForm.get('email')?.valid">
-                El campo no es un email válido
+<body>
+    <div [ngClass]="containerClass" id="container">
+        <div class="form-container register-container">
+            <form action="#" >
+                <h1>Registro</h1>
+                <!-- Nombre -->
+                <input type="text" name="nombre" placeholder="Nombre" formControlName="Nombre">
+                <!-- Apellido -->
+                <input  type="text" name="apellidos" formControlName="apellidos" placeholder="Apellido"
+                formControlName="apellidos">
+                <!-- EMAIL -->
+                <input type="email" name="email" formControlName="email" placeholder="Email"
+                formControlName="email">
+                <div class="error" *ngIf="!registroForm.get('email')?.valid">
+                    No es un mail valido
+                </div>
+
+                <!-- PASSWORD -->
+                <input  type="password" name="password" formControlName="password" placeholder="Contraseña"
+                formControlName="password">
+                <div class="error" *ngIf="!registroForm.get('password')?.valid">
+                    La contraseña debe contener al menos 8 caracteres
+                </div>
+
+
+                <button>Registrate</button>
+                <span>Tambien puedes utilizar tu cuenta</span>
+                <!-- Utilizamos la etiqueta i para utilizar los iconos de una libreria inportada en app.component.html -->
+                <div class="social-container">
+                    <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
+                    <a href="#" class="social"><i class="lni lni-google"></i></a>
+                    <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-container login-container">
+            <form [formGroup]="loginForm" (ngSubmit)="submit()" action="#">
+                <h1 id="aqui">Login</h1>
+                <!-- EMAIL -->
+                <input type="email" placeholder="Email" formControlName="email">
+                <div class="error" *ngIf="!loginForm.get('email')?.valid">
+                    No es un email valido
+                </div>
+                <!-- PASSWORD -->
+                <input type="password" placeholder="Password" formControlName="password">
+                <div class="error" *ngIf="!loginForm.get('password')?.valid">
+                    No es una contraseña valida
+                </div>
+                <div class="content">
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <label>Recuerdame</label>
+                    </div>
+                    <div class="pass-link">
+                        <a href="#">Has olvidado tu contraseña!</a>
+                    </div>
+                </div>
+                <button [disabled]="!loginForm.valid" type="submit">Login</button>
+                <span>Tambien puedes utilizar tu cuenta</span>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
+                    <a href="#" class="social"><i class="lni lni-google"></i></a>
+                    <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
+                </div>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="title">Bienvenidos a<br> FLEX</h1>
+                    <p>Si posees una cuenta, inicia sesión y disfruta de nuestros productos</p>
+                    <button class="ghost" id="login" (click)="toggleContainerClass()">Login
+                        <i class="lni lni-arrow-left login"></i>
+                    </button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="title">Registrate <br> ahora !</h1>
+                    <p>Si aún no tienes una cuenta, puedes empezar tu viaje con nosotros ahora !</p>
+                    <button class="ghost" id="register" (click)="toggleContainerClass()">Registrate
+                        <i class="lni lni-arrow-right register"></i>
+                    </button>
+                </div>
             </div>
-
         </div>
-        <div>
-            <label for="">Contraseña</label>
-            <input type="password" name="password" placeholder="Escribe tu password" formControlName="password">
-            <div class="error" *ngIf="!loginForm.get('password')?.valid">
-                La contraseña tiene que tener al menos 8 caracteres
-            </div>
-        </div>
-        <div>
-            <label for="">Si aún no estas registrado, registrte en el siguiente enlace: </label>
-            <a routerLink="/registro">Registrate aqui ! </a>
-        </div>
-    </fieldset>
-
-    <button [disabled]="!loginForm.valid" type="submit">Acceder</button>
-</form>
+    </div>
+</body>
