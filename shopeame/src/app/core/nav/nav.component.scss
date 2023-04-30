@@ -59,6 +59,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-top: 25px;
+  
+  .nav_izq{
+    width: 25%;
+  }
 
 
  .nav_izq_ul ul {
@@ -90,6 +94,9 @@ nav {
   .nav_dcha {
     display: flex;
     flex-wrap: wrap;
+    width: 25%;
+    justify-content: right;
+    
     .nav_dcha_img1 {
       width: 70px;
       height: 70px;
