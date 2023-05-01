@@ -1,30 +1,50 @@
-<form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
-    <input formControlName="nombre" placeholder="Nombre">
-    <input formControlName="descripcion" placeholder="Descripcion">
-    <input formControlName="imagen" placeholder="Imagen">
-    <input formControlName="precio" placeholder="Precio">
-    <input formControlName="stock" placeholder="Stock">
-    <button type="submit">Submit</button>
-</form>
-
-<div class="producto">
-    <div>
-      <ul>
-        <li>
-          <h3>{{ newProduct.id }}</h3>
-  
-          <h4>{{ newProduct.nombre }}</h4>
-  
-          <img src="{{ newProduct.imagen }}" alt="{{ newProduct.nombre }}" />
-  
-          <p>{{ newProduct.precio }} €</p>
-  
-          <p>{{ newProduct.descripcion }}</p>
-  
-          <p>Quedan {{ newProduct.stock }} articulos</p>
-        </li>
-      </ul>
-    </div>
+<div class="outerbox">
+  <div class="form">
+    <form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="">Nombre</label>
+        <input formControlName="nombre" placeholder="Nombre" />
+      </div>
+      <div>
+        <label for="descripcion">Descripcion</label>
+        <input formControlName="descripcion" placeholder="Descripcion" />
+      </div>
+      <div>
+          <label for="iamgen">Imagen</label>
+        <input formControlName="imagen" placeholder="Imagen" />
+      </div>
+      <div>
+        <label for="precio">Precio</label>  
+        <input formControlName="precio" placeholder="Precio" />
+      </div>
+      <div>
+          <label for="stock">Stock</label>
+        <input formControlName="stock" placeholder="Stock" />
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
   </div>
 
-
+  <div class="output">
+    <div>
+      {{newProduct.id}}
+    </div>
+    <div>
+      {{newProduct.nombre}}
+    </div>
+    <div>
+      {{newProduct.descripcion}}
+    </div>
+    <div>
+      <img src="{{newProduct.imagen}}" alt="{{newProduct.nombre}}">
+    </div>
+    <div>
+      {{newProduct.precio}}
+    </div>
+    <div>
+      {{newProduct.stock}}
+    </div>
+  </div>
+  

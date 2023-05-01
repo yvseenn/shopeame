@@ -1,0 +1,33 @@
+.outerbox {
+    margin-top: 25px;
+    border: 1px solid black;
+    padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-flow: row;
+  grid-template-areas: ". .";
+  .form {
+    border-right: 1px;
+    display: grid;
+    flex-wrap: wrap;
+    flex-direction: row;
+  
+    div {
+      display: flex;
+      flex-direction: column;
+      margin: 15px;
+    }
+  }
+  
+  .output {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-left: 1px solid black;
+    div{
+        border: 1px red solid;
+    }
+  }
+}
+
