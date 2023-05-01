@@ -8,7 +8,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-
+  public active : boolean = false 
   hayUser = false
 
   //Asigna true o false dependiendo de si hay usuario o no
@@ -24,6 +24,9 @@ export class NavComponent {
         this.hayUser = this.servicioUsuario.estaLoggeado()
       }
     })
+  }
+  setActive() : void {
+    this.active = !this.active
   }
 
 }
