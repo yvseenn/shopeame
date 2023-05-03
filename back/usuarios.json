@@ -20,6 +20,13 @@
       "nombre": "edu",
       "apellidos": "avellanet",
       "id": 3
+    },
+    {
+      "email": "edu2@gmail.com",
+      "password": "$2a$10$4KtaY17XNUlPoc1ItRbGv.qEaqn4S1QtyMw8v12XvQ42ZYrX1NQW6",
+      "nombre": "Edu",
+      "apellidos": "Avellanet",
+      "id": 4
     }
   ]
 }

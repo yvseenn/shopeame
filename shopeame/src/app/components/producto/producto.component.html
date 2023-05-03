@@ -1,20 +1,24 @@
 <div class="producto">
-    <div>
-      <ul>
-        <li>
-          <h3>{{ producto.id }}</h3>
-  
-          <h4>{{ producto.nombre }}</h4>
-  
-          <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}" />
-  
-          <p>{{ producto.precio }} €</p>
-  
-          <p>{{ producto.descripcion }}</p>
-  
-          <p>Quedan {{ producto.stock }} articulos</p>
-        </li>
-      </ul>
-    </div>
+  <div>
+    <ul>
+      <li>
+        <h3 class="product-id">{{ producto.id }}</h3>
+
+        <h4 class="product-name">{{ producto.nombre }}</h4>
+
+        <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}" />
+
+        <p>{{ producto.descripcion }}</p>
+
+        <p>{{ producto.precio }} €</p>
+
+        <p>Quedan {{ producto.stock }} articulos</p>
+        <!-- Boton compra -->
+        <div class="btn-compra">
+          <a href="#"><span>Comprar !</span></a>
+        </div>
+
+      </li>
+    </ul>
   </div>
-  
+</div>

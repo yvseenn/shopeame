@@ -12,11 +12,11 @@ export class UsuarioService {
   constructor(private http: HttpClient, private cookies: CookieService) { }
 
   registrar(nuevoUsuario: Usuario) {
-    return this.http.post('http://localhost:3000/register', nuevoUsuario);
+    return this.http.post('http://localhost:3001/register', nuevoUsuario);
   }
 
   acceder(datos: DatosAcceso) {
-    return this.http.post('http://localhost:3000/login', datos);
+    return this.http.post('http://localhost:3001/login', datos);
   }
 
   //Logout

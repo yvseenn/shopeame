@@ -2,10 +2,10 @@
 <body>
     <div [ngClass]="containerClass" id="container">
         <div class="form-container register-container">
-            <form action="#" >
+            <form novalidate (ngSubmit)="registroSubmit()" [formGroup]="registroForm" action="#" >
                 <h1>Registro</h1>
                 <!-- Nombre -->
-                <input type="text" name="nombre" placeholder="Nombre" formControlName="Nombre">
+                <input type="text" name="nombre" placeholder="Nombre" formControlName="nombre">
                 <!-- Apellido -->
                 <input  type="text" name="apellidos" formControlName="apellidos" placeholder="Apellido"
                 formControlName="apellidos">
@@ -24,7 +24,7 @@
                 </div>
 
 
-                <button>Registrate</button>
+                <button [disabled]="!registroForm.valid" type="submit">Registrate</button>
                 <span>Tambien puedes utilizar tu cuenta</span>
                 <!-- Utilizamos la etiqueta i para utilizar los iconos de una libreria inportada en app.component.html -->
                 <div class="social-container">
@@ -34,7 +34,7 @@
                 </div>
             </form>
         </div>
-
+        
         <div class="form-container login-container">
             <form [formGroup]="loginForm" (ngSubmit)="submit()" action="#">
                 <h1 id="aqui">Login</h1>

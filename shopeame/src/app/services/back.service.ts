@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Input } from '@angular/core';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -32,5 +33,9 @@ export class BackService {
   };
   patchPrenda =(producto:any) => {
     this.prendaInfo = producto
+  }
+  deleteProduct(id: number): Observable<any> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete(url);
   }
 }
