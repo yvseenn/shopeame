@@ -1,27 +1,28 @@
 <div class="products">
 
   <div class="products_title">
-    <h3>Total Productos ({{ listaPrendas.length }})</h3>
+    <h3 class="titulo-p">Total Productos ({{ listaPrendas.length }})</h3>
   </div>
 
   <div class="products_list">
     <ul>
       <li *ngFor="let prenda of listaPrendas">
-        <h3>{{ prenda.id }}</h3>
+        <h3 class="product-id">{{ prenda.id }}</h3>
 
-        <h4>{{ prenda.nombre }}</h4>
+        <h4 class="product-name">{{ prenda.nombre }}</h4>
 
         <img src="{{ prenda.imagen }}" alt="{{ prenda.nombre }}" />
 
-        <p>{{ prenda.precio }} €</p>
-
         <p>{{ prenda.descripcion }}</p>
 
+        <p>{{ prenda.precio }} €</p>
+      
         <p>Quedan {{ prenda.stock }} articulos</p>
 
-        <div class="products_product_btn">
-            <button routerLink="/productos/{{ prenda.id }}">Ver mas</button>
+        <div class="btn-mas">
+          <a routerLink="/productos/{{ prenda.id }}"><span>Ver más</span></a>
         </div>
+
       </li>
     </ul>
   </div>

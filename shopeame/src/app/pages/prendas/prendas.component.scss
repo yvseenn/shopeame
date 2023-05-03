@@ -1,3 +1,7 @@
+.titulo-p{
+  font-size: 30px;
+}
+
 .products_title {
   margin: 5px;
   
@@ -7,9 +11,8 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
   align-content: space-between;
-
+  
   li {
     background-color: white;
     display: flex;
@@ -18,19 +21,80 @@ ul {
     align-items: center;
     padding: 20px;
     border: 1px solid black;
-    width: 250px;
+    width: 300px;
     min-height: 300px;
+    border-radius: 20px;
+    margin:10px;
+
+    .product-id{
+      font-size: 25px;
+    }
+
+    .product-name{
+      font-size: 20px;
+      text-transform: capitalize;
+    }
 
     .product-btn {
       margin-bottom: 25px;
     }
 
     img {
-      width: 100%;
+      width: 85%;
+      height:50vh;
     }
 
     &:hover {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+    .btn-mas{
+      margin:1vh;
+    }
+    
+    a{
+      display: block;
+      width: 200px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 18px;
+      font-family: sans-serif;
+      text-decoration: none;
+      color: #333;
+      border: 2px solid #333;
+      letter-spacing: 2px;
+      text-align: center;
+      position: relative;
+      transition: all .35s;
+      border-radius: 30px;
+    }
+    
+    a span{
+      position: relative;
+      z-index: 2;
+    }
+    
+    a:after{
+      position: absolute;
+      border-radius: 30px;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #4bb6b7;
+      transition: all .35s;
+      
+    }
+    
+    a:hover{
+      color: #fff;
+    }
+    
+    a:hover:after{
+      width: 100%;
+    }
+
   }
 }
+  
+

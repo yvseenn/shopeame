@@ -22,7 +22,12 @@
         <input formControlName="stock" placeholder="Stock" />
       </div>
       <div>
-        <button type="submit">Submit</button>
+        <button type="submit">Agregar</button>
+        <div>
+          <label for="id">ID</label>
+        <input formControlName="id" placeholder="ID" />
+      </div>
+        <button class="btn-delete" (click)="onDelete()">Borrar</button>
       </div>
     </form>
   </div>
